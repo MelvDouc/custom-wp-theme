@@ -1,0 +1,148 @@
+/*
+Theme Name: HTML to WP Theme
+Author: Melv
+Description: Custom lightweight theme
+Version: 1.0
+Tags: lightweight
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --WP-marginTop: 32px;
+    --bodyHeight: calc(100vh - var(--WP-marginTop));
+    --mainPadding: 1em;
+    --blue1: rgb(173, 216, 230);
+    --blue2: rgb(144, 216, 230);
+    --blue3: rgb(173, 216, 235);
+    --blue4: rgb(144, 216, 235);
+    --green1: rgb(150,255,150);
+    --purple1: rgb(204, 138, 253);
+    --purple2: rgb(204, 160, 253);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-width: 100vw;
+    height: var(--bodyHeight);
+    min-height: var(--bodyHeight);
+}
+
+body {
+    font-family: 'Montserrat', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex-basis: auto;
+    /* background-color: rgb(254,254,255); */
+}
+
+/*  */
+/*  */
+
+#main-title {
+    display: grid;
+    place-items: center;
+    padding: 1.5em;
+    text-decoration: none;
+    color: black;
+    background: var(--blue2);
+    background-image: radial-gradient(var(--blue1), var(--blue2));
+    transition: filter 0.5s linear;
+}
+
+#main-title:hover {
+    filter: hue-rotate(15deg);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.75rem;
+    text-transform: uppercase;
+}
+
+/*  */
+/*  */
+
+main {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.container {
+    padding: var(--mainPadding);
+}
+
+h2.section-title {
+    text-align: center;
+    background-color: var(--green1);
+    padding: .5em;
+}
+
+/*  */
+/*  */
+
+main p {
+    margin-bottom: .75em;
+}
+
+/*  */
+/*  */
+
+#sidebar {
+    padding: var(--mainPadding);
+    display: flex;
+    flex-flow: column wrap;
+    background-color: var(--purple1);
+}
+
+#sidebar ul {
+    list-style-type: none;
+}
+
+#sidebar > ul > li {
+    margin-bottom: .75em;
+} 
+
+#sidebar > ul > li + li {
+    border-top: 1px solid var(--purple2);
+}
+
+#sidebar form > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar form > div > * + * {
+    margin-top: .5em;
+}
+
+#sidebar a {
+    color: white;
+}
+
+#sidebar a:hover {
+    color: blue;
+}
+
+#sidebar ul[role="navigation"] h2 {
+    margin-bottom: .33em;
+}
+
+/*  */
+/*  */
+
+footer {
+    margin-top: auto;
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(rgb(51, 51, 51), rgb(22,22,22));
+    color: white;
+}
